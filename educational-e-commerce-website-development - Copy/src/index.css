@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-vazir: 'Vazirmatn', sans-serif;
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #3b82f6;
+  --color-primary-600: #2563eb;
+  --color-primary-700: #1d4ed8;
+  --color-primary-800: #1e40af;
+  --color-primary-900: #1e3a8a;
+  --color-accent-400: #f59e0b;
+  --color-accent-500: #d97706;
+  --color-accent-600: #b45309;
+  --color-success-500: #22c55e;
+  --color-danger-500: #ef4444;
+}
+
+* {
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+body {
+  direction: rtl;
+  background-color: #f8fafc;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.animate-slide-in {
+  animation: slideInRight 0.5s ease-out;
+}
+
+/* Rich text editor styles */
+.prose-content h1 { font-size: 1.5rem; font-weight: 700; margin: 1rem 0; }
+.prose-content h2 { font-size: 1.25rem; font-weight: 600; margin: 0.75rem 0; }
+.prose-content h3 { font-size: 1.125rem; font-weight: 600; margin: 0.5rem 0; }
+.prose-content p { margin: 0.5rem 0; line-height: 1.8; }
+.prose-content ul { list-style: disc; padding-right: 1.5rem; margin: 0.5rem 0; }
+.prose-content ol { list-style: decimal; padding-right: 1.5rem; margin: 0.5rem 0; }
+.prose-content li { margin: 0.25rem 0; }
+.prose-content a { color: #2563eb; text-decoration: underline; }
+.prose-content blockquote { border-right: 4px solid #3b82f6; padding: 0.5rem 1rem; margin: 1rem 0; background: #eff6ff; border-radius: 0.25rem; }
+.prose-content img { max-width: 100%; border-radius: 0.5rem; margin: 1rem auto; }
+.prose-content table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+.prose-content th, .prose-content td { border: 1px solid #e2e8f0; padding: 0.5rem; text-align: right; }
+.prose-content th { background: #f1f5f9; font-weight: 600; }
